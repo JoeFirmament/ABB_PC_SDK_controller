@@ -286,7 +286,7 @@ namespace TestRemoteControl
 
         private void button9_Click(object sender, EventArgs e)
         {
-            errLog = robot.errLogger(errLog, "[e-mail]          send 2018_xx_xx_xx_log.txt to  yu.qiao@intplusplus.com.");
+            errLog = robot.errLogger(errLog, "[e-mail]          send 2018_xx_xx_xx_log.txt to  bquill.com.");
             richTextBox1.Lines = errLog.ToArray();
         }
 
