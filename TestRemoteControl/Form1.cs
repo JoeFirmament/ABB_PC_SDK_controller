@@ -22,7 +22,7 @@ namespace TestRemoteControl
        
         public RobotArmController()
         {
-            InitializeComponent();//初始化用户界面
+            InitializeComponent();//InitUserFace
             robot = new ABBController();
             //robot.Scan();
             this.listView1.Items.Clear();
@@ -239,7 +239,7 @@ namespace TestRemoteControl
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             richTextBox1.SelectionStart = richTextBox1.Text.Length;
-            //滚动到光标位置
+            //move to cursor position
            richTextBox1.ScrollToCaret();
 
             this.CheckKeyword("[Scan]", Color.Purple, 0);
