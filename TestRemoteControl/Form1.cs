@@ -8,6 +8,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 using System.Collections;
 using ABB.Robotics.Controllers;
 using ABB.Robotics.Controllers.Discovery;
@@ -47,7 +48,26 @@ namespace TestRemoteControl
             errLog = robot.errLogger(errLog, "[Scan]             " + robot.controllers.Count().ToString() + "  controllers");
             richTextBox1.Lines=errLog.ToArray();
 
+
+
         }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (robot.controllers.Count() == 4)
+            {
+
+
+                button7_Click_1(null, null);
+                button5_Click(null, null);
+                button7_Click_1(null, null);
+                button2_Click(null, null);
+                button7_Click_1(null, null);
+                button3_Click(null, null);
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
             //scan button
@@ -221,6 +241,7 @@ namespace TestRemoteControl
 
 
         private void button7_Click_1(object sender, EventArgs e)
+            // Select all items
         {
 
             listView1.MultiSelect = true;
