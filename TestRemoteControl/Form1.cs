@@ -55,20 +55,30 @@ namespace TestRemoteControl
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            if (robot.controllers.Count() == 4)
+            for (int i = 0; i < 10; i++)
             {
+                if (robot.controllers.Count() == 4)
+                {
 
-
-                button7_Click_1(null, null);
-                button5_Click(null, null);
-                button7_Click_1(null, null);
-                button2_Click(null, null);
-                button7_Click_1(null, null);
-                button3_Click(null, null);
+                    button7_Click_1(null, null);
+                    button4_Click(null, null);
+                    button7_Click_1(null, null);
+                    button6_Click(null, null);
+                    button7_Click_1(null, null);
+                    button5_Click(null, null);
+                    button7_Click_1(null, null);
+                    button2_Click(null, null);
+                    button7_Click_1(null, null);
+                    button3_Click(null, null);
+                    errLog = robot.errLogger(errLog, "[Start]             " + robot.controllers.Count().ToString() + "  controllers");
+                    richTextBox1.Lines = errLog.ToArray();
+                    return;
+                }
             }
+            errLog = robot.errLogger(errLog, "[start][error]          can't find 4 controllers");
+            richTextBox1.Lines = errLog.ToArray();
+
         }
-
-
         private void button1_Click(object sender, EventArgs e)
             //scan button
         {
