@@ -12,3 +12,5 @@ ABB robotarm controller(simple demo) with C# pcsdk6.0
 
 ---
 
+[![](https://bb-embed.herokuapp.com/embed?v=BV1Kt4y1u7fz)](https://www.bilibili.com/video/BV1Kt4y1u7fz?share_source=copy_web&vd_source=dd62c2ec31e1627fa285052bae810556)
+
